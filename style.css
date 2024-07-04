@@ -11,6 +11,10 @@ body {
     color: white;
 }
 
+.container {
+    height: 100vh;
+}
+
 .left {
     width: 25vw;
     padding: 10px;
@@ -35,20 +39,113 @@ body {
     width: 100%;
     display: flex;
     gap: 15px;
-    padding-top: 14px;
+    
     font-weight: bold;
     align-items: center;
-    padding: 26px 14px;
+    padding: 14px 14px 0;
     font-size: 13px;
 }
 
 .library {
-    min-height: 80vh;
+    min-height: 77vh;
     position: relative;
 }
 
 .heading img {
     width: 30px;
+}
+
+.songList {
+    height: 480px;
+    overflow: scroll;
+    /* margin-bottom: 44px; */
+}
+
+.songList ul {
+    padding: 0 10px;
+    list-style-type: decimal;
+}
+
+.info {
+    font-size: 13px;
+    width: 344px;
+}
+
+.songList ul li {
+    display: flex;
+    list-style-type: decimal;
+    gap: 10px;
+    cursor: pointer;
+    padding: 12px 0;
+    border: 1px solid white;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playnow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playnow span {
+    font-size: 15px;
+    width: 62px;
+    padding: 12px;
+}
+
+#divi {
+    padding: 0 22px;
+}
+
+
+
+
+
+
+
+
+/* .songList {
+    counter-reset: song-counter;
+}
+
+.songList tr {
+    counter-increment: song-counter;
+}
+
+.songList tr td::before {
+    content: counter(song-counter) ". ";
+    margin-right: 10px;
+} */
+
+
+/* li {
+    list-style-type: decimal;
+} */
+
+
+
+
+
+
+
+
+table {
+    display: block;
+    border-collapse: unset;
+    box-sizing: unset;
+    text-indent: 0%;
+    unicode-bidi: unset;
+    border-spacing: 2px;
+    border-color: red;
+}
+
+#divi td a {
+text-decoration: none;
+color: white;
 }
 
 .footer {
@@ -117,6 +214,10 @@ body {
     padding: 16px;
 }
 
+.spotifyPlaylists h1 {
+    padding: 8px 13px 0;
+}
+
 .cardContainer {
     display: flex;
     gap: 10px;
@@ -152,11 +253,37 @@ body {
 }
 
 .playbar {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(18, 70, 18);
+    position: fixed;
+    /* border-radius: 30px; */
+    filter: invert(1);
+    bottom: 20px;
+    height: 40px;
+    width: 73vw;
+    background-color: rgba(255, 255, 255, 0.888);
     padding: 12px;
+}
+
+.seekbar {
+    height: 2px;
+    /* left: 0%; */
+    width: 96%;
+    border-radius: 2px;
+    /* background-color: hsla(0,0%,100%,.3); */
+    background-color: black;
+    /* border: 2px solid black; */
+    position: absolute; 
+    bottom: 0;
+}
+
+.circle {
+    position: relative;
+    left: 0%;
+    height: 12px;
+    width: 12px;
+    border-radius: 13px;
+    background-color: black;
+    bottom: 5px;
+    transition: left 0.5s;
 }
 
 .songbuttons {

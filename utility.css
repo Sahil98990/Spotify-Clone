@@ -65,3 +65,7 @@ html {
     scrollbar-width: thin;
     scrollbar-color: #555 #1c1c1c;
 }
+
+.grey-color {
+    color: #b3b3b3
+}
