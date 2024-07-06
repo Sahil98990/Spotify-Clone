@@ -1,3 +1,5 @@
+
+
 let currentSong = new Audio();
 let songs;
 
@@ -31,11 +33,15 @@ async function getSongs() {
 const playMusic = (track, pause=false) => {
     // let audio = new Audio(track);
     currentSong.src = track;
+        let name = currentSong.src.split("/") [5];
+        name = name.replaceAll("%20", " ");
+        name = name.replace(".mp3", "");
+
     if(!pause) {
         currentSong.play();
         play.src = "img/pause.svg";
     }
-    document.querySelector(".songinfo").innerHTML = "SB UltraMax-Spotify";
+    document.querySelector(".songinfo").innerHTML = name;
     document.querySelector(".songtime").innerHTML = "00:00 / 00:00"
 }
 
