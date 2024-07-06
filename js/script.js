@@ -33,7 +33,8 @@ async function getSongs() {
 const playMusic = (track, pause=false) => {
     // let audio = new Audio(track);
     currentSong.src = track;
-        let name = currentSong.src.split("/") [5];
+   
+        let name = currentSong.src.split("songs/")[1];
         name = name.replaceAll("%20", " ");
         name = name.replace(".mp3", "");
 
