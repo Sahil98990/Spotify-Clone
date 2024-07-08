@@ -293,6 +293,10 @@ table {
     transition: all 1s ease-out;
 }
 
+#play {
+    width: 52px;
+}
+
 .playbar {
     position: fixed;
     /* border-radius: 30px; */
