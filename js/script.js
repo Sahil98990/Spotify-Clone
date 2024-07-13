@@ -87,7 +87,7 @@ async function displayAlbums() {
                 let response = await a.json(); 
                 cardContainer.innerHTML = cardContainer.innerHTML + ` <div data-folder="${folder}" class="card">
                         <div class="play">
-                            <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"
                                 style="display: block; margin: auto;">
                                 <defs>
                                     <clipPath id="circle-mask">
